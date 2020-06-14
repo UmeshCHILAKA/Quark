@@ -19,22 +19,22 @@ namespace Quark.Tests
         public void IsOutOfRangeTests()
         {
             //Positive Numbers
-            Shield.IsOutofRange(5.0, 4.6, 5.5, DummyParameter);
-            Shield.IsOutofRange(5.0, 5.0, 5.5, DummyParameter);
-            Shield.IsOutofRange(5.0, 4.6, 5.0, DummyParameter);
+            Shield.IsOutofRange(DummyParameter, 5.0, 4.6, 5.5);
+            Shield.IsOutofRange(DummyParameter, 5.0, 5.0, 5.5);
+            Shield.IsOutofRange(DummyParameter, 5.0, 4.6, 5.0);
 
-            Assert.Throws<ArgumentOutOfRangeException>(() => Shield.IsOutofRange(4.0, 4.6, 5.5, DummyParameter));
-            Assert.Throws<ArgumentOutOfRangeException>(() => Shield.IsOutofRange(4.599, 4.6, 5.5, DummyParameter));
-            Assert.Throws<ArgumentOutOfRangeException>(() => Shield.IsOutofRange(5.50001, 4.6, 5.5, DummyParameter));
+            Assert.Throws<ArgumentOutOfRangeException>(() => Shield.IsOutofRange(DummyParameter, 4.0, 4.6, 5.5));
+            Assert.Throws<ArgumentOutOfRangeException>(() => Shield.IsOutofRange(DummyParameter, 4.599, 4.6, 5.5));
+            Assert.Throws<ArgumentOutOfRangeException>(() => Shield.IsOutofRange(DummyParameter, 5.50001, 4.6, 5.5));
 
             //Negative Numbers
-            Shield.IsOutofRange(-5.0, -5.5, -4.6, DummyParameter);
-            Shield.IsOutofRange(-5.0, -5.5, -5.0, DummyParameter);
-            Shield.IsOutofRange(-5.0, -5.0, -4.6, DummyParameter);
+            Shield.IsOutofRange(DummyParameter, -5.0, -5.5, -4.6);
+            Shield.IsOutofRange(DummyParameter, -5.0, -5.5, -5.0);
+            Shield.IsOutofRange(DummyParameter, -5.0, -5.0, -4.6);
 
-            Assert.Throws<ArgumentOutOfRangeException>(() => Shield.IsOutofRange(-4.0, -5.5, -4.6, DummyParameter));
-            Assert.Throws<ArgumentOutOfRangeException>(() => Shield.IsOutofRange(-4.599, -5.5, -4.6, DummyParameter));
-            Assert.Throws<ArgumentOutOfRangeException>(() => Shield.IsOutofRange(-5.50001, -5.5, -4.6, DummyParameter));
+            Assert.Throws<ArgumentOutOfRangeException>(() => Shield.IsOutofRange(DummyParameter, -4.0, -5.5, -4.6));
+            Assert.Throws<ArgumentOutOfRangeException>(() => Shield.IsOutofRange(DummyParameter, -4.599, -5.5, -4.6));
+            Assert.Throws<ArgumentOutOfRangeException>(() => Shield.IsOutofRange(DummyParameter, -5.50001, -5.5, -4.6));
 
         }
 

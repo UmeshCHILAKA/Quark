@@ -23,12 +23,12 @@ namespace Quark
         /// <summary>
         /// Checks if specified value is in limits. Throws ArgumentOutOfRangeException, if value is outside limits.
         /// </summary>
+        /// <param name="paramName">Name of the parameter being verified.</param>
         /// <param name="value">The value to be checked.</param>
         /// <param name="minimum">The minimum limit.</param>
         /// <param name="maximum">The maximum limit.</param>
-        /// <param name="paramName">Name of the parameter being verified.</param>
         /// <exception cref="ArgumentOutOfRangeException">Throws ArgumentOutOfRangeException, if value is outside limits.</exception>
-        public static void IsOutofRange(double value, double minimum, double maximum, string paramName)
+        public static void IsOutofRange(string paramName, double value, double minimum, double maximum)
         {
             if (value < minimum || value > maximum)
             {
