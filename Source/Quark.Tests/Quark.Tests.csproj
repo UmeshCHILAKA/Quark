@@ -54,7 +54,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Quark\Quark.csproj">
+    <ProjectReference Include="..\Quark\Quark.csproj">
       <Project>{1ce917f9-dd01-4b62-afa5-47df2d424c0a}</Project>
       <Name>Quark</Name>
     </ProjectReference>
