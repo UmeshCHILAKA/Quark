@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace Quark.Tests
 {
     [TestFixture()]
-    public class ShieldTests
+    internal class ShieldTests
     {
         const string DummyParameter = "DummyParam";
         [Test()]
