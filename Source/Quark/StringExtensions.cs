@@ -5,7 +5,7 @@
         /// <summary>Limits the input string to the count.</summary>
         /// <param name="text">The text to be limited to.</param>
         /// <param name="count">The count of characters.</param>
-        /// <returns>Text limited to characters</returns>
+        /// <returns>Text (input string) limited to characters</returns>
         public static string LimitChars(this string text, int count)
         {
             Shield.IsOutofRange("Count", count, 4, double.MaxValue);

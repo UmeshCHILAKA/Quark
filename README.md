@@ -8,7 +8,7 @@ Basic C# code for helpers and conversions between units
 - **IsOutofRange** - Checks if specified value is in limits. Throws **ArgumentOutOfRangeException**, if value is outside limits.
 - **IsNan** - Checks if specified value is valid number. Throws **ArgumentException**, if value is NaN.
 - **IsInValidNumber** - Checks if specified value is valid number. Throws **ArgumentException**, if value is NaN or Infinity.
-- **IsCollectionEmpty** - Checks if Collection has values. Throws **ArgumentException, if Collection is empty or  **ArgumentNullException** if collection is null.
+- **IsCollectionEmpty** - Checks if Collection has values. Throws **ArgumentException**, if Collection is empty or  **ArgumentNullException** if collection is null.
 
 ### StringExtensions
 
