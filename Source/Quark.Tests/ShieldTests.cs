@@ -52,10 +52,10 @@ namespace Quark.Tests
         [Test()]
         public void IsValidNumberTestes()
         {
-            Shield.IsValidNumber(DummyParameter, 11.57);
+            Shield.IsInvalidNumber(DummyParameter, 11.57);
 
-            Assert.Throws<ArgumentException>(() => Shield.IsValidNumber(DummyParameter, double.NegativeInfinity));
-            Assert.Throws<ArgumentException>(() => Shield.IsValidNumber(DummyParameter, double.PositiveInfinity));
+            Assert.Throws<ArgumentException>(() => Shield.IsInvalidNumber(DummyParameter, double.NegativeInfinity));
+            Assert.Throws<ArgumentException>(() => Shield.IsInvalidNumber(DummyParameter, double.PositiveInfinity));
             Assert.Throws<ArgumentException>(() => Shield.IsNan(DummyParameter, double.NaN));
         }
 

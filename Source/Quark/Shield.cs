@@ -48,18 +48,18 @@ namespace Quark
                 throw new ArgumentException(paramName);
         }
 
-        /// <summary>hecks if specified value is valid number. Throws ArgumentException, if value is NaN or Infinity.</summary>
+        /// <summary>Checks if specified value is valid number. Throws ArgumentException, if value is NaN or Infinity.</summary>
         /// <param name="paramName">Name of the parameter.</param>
         /// <param name="value">The value to be checked for.</param>
         /// <exception cref="ArgumentException">Throws ArgumentException, if value is NaN or infinity</exception>
-        public static void IsValidNumber(string paramName, double value)
+        public static void IsInvalidNumber(string paramName, double value)
         {
             if (double.IsNaN(value) || double.IsInfinity(value))
                 throw new ArgumentException(paramName);
         }
 
         /// <summary>
-        /// Checks if Collection is empty. Throws ArgumentException, if Collection is empty.
+        /// Checks if Collection has values. Throws ArgumentException, if Collection is empty or  ArgumentNullException if collection is null.
         /// </summary>
         /// <param name="paramName">Name of the parameter.</param>
         /// <param name="collection">The collection to be checked for.</param>
