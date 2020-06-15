@@ -23,3 +23,8 @@ Basic C# code for helpers and conversions between units
 - **CommonDocumentsPath** - Gets the Common Documents path.
 - **DirectoryCopy** - Copies the Directories.
 - **RandomFileName** -Gets a random folder name or file name.
+
+### PathHelper
+- **ToUnicodeValue** - Returns the Unicode value of the character.
+- **ToDisplayValue** -  Returns displayable value for a character.
+- **ToUrlValue** - Returns the URL equivalent character.
