@@ -17,3 +17,9 @@ Basic C# code for helpers and conversions between units
 ### DoubleExtensions
 - **LimitTo** - Limits number to boundaries
 - **HasValue** - Determines whether the number has value.
+
+### PathHelper
+- **AppFilePath** - Gets the application directory path, Path from where application is launched.
+- **CommonDocumentsPath** - Gets the Common Documents path.
+- **DirectoryCopy** - Copies the Directories.
+- **RandomFileName** -Gets a random folder name or file name.
