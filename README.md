@@ -11,5 +11,9 @@ Basic C# code for helpers and conversions between units
 - **IsCollectionEmpty** - Checks if Collection has values. Throws **ArgumentException**, if Collection is empty or  **ArgumentNullException** if collection is null.
 
 ### StringExtensions
-
 - **LimitChars** - Limits the input string to the count.
+- **GetDouble** - Gets the double from string
+
+### DoubleExtensions
+- **LimitTo** - Limits number to boundaries
+- **HasValue** - Determines whether the number has value.

@@ -54,8 +54,7 @@ namespace Quark
         /// <exception cref="ArgumentException">Throws ArgumentException, if value is NaN or infinity</exception>
         public static void IsInvalidNumber(string paramName, double value)
         {
-            if (double.IsNaN(value) || double.IsInfinity(value))
-                throw new ArgumentException(paramName);
+            if (!value.HasValue()) throw new ArgumentException(paramName);
         }
 
         /// <summary>
