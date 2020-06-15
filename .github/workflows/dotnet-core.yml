@@ -10,16 +10,19 @@ jobs:
   build:
 
     runs-on: windows-latest
-
+ 
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.101
-    - name: Install dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --configuration Release
-    - name: Test
-      run: dotnet test --verbosity normal
+    - uses: actions/checkout@v1
+      name: Checkout Code
+     
+    - name: Setup MSBuild Path
+      uses: warrenbuckley/Setup-MSBuild@v1
+       
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.2
+     
+    - name: Restore NuGet Packages
+      run: nuget restore Quark.sln
+ 
+    - name: Build and Publish Web App
+      run: msbuild Quark.sln /p:Configuration=Release
