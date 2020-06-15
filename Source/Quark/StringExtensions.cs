@@ -1,4 +1,6 @@
-﻿namespace Quark
+﻿using System.Globalization;
+
+namespace Quark
 {
     public static class StringExtensions
     {
@@ -12,6 +14,32 @@
 
             if (text.Length <= count) return text;
             return string.Concat(text.Substring(0, count - 3), "...");
+        }
+
+        /// <summary>Gets the double from string.</summary>
+        /// <param name="number">The number in string format.</param>
+        /// <returns>floating point number, NaN if number is invalid</returns>
+        public static double GetDouble(this string number)
+        {
+            return number.GetDouble(NumberStyles.Any);
+        }
+
+        /// <summary>Gets the double from string.</summary>
+        /// <param name="number">The number in string format.</param>
+        /// <param name="styles">The number style of numeric string.</param>
+        /// <returns>floating point number, NaN if number is invalid</returns>
+        public static double GetDouble(this string number, NumberStyles styles)
+        {
+            double doubleValue = double.NaN;
+            try
+            {
+                doubleValue = double.Parse(number, styles, CultureInfo.CurrentCulture);
+            }
+            catch
+            {
+                doubleValue = double.Parse(number, styles, CultureInfo.InvariantCulture);
+            }
+            return doubleValue;
         }
     }
 }

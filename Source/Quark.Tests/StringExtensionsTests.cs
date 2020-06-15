@@ -32,5 +32,15 @@ namespace Quark.Tests
             Assert.Throws<ArgumentOutOfRangeException>(new TestDelegate(() => longString.LimitChars(2)));
             Assert.Throws<ArgumentOutOfRangeException>(new TestDelegate(() => longString.LimitChars(3)));
         }
+
+        [Test()]
+        public void GetDoubleTest()
+        {
+            Assert.AreEqual(5.45, "5.45".GetDouble());
+            Assert.AreEqual(-5.45, "-5.45".GetDouble());
+
+            Assert.AreEqual(5.45, "5.450000".GetDouble());
+            Assert.AreEqual(-5.45, "-5.4500000000".GetDouble());
+        }
     }
 }
