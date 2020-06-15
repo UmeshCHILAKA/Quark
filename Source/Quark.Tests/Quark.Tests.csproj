@@ -47,6 +47,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CharExtensionsTests.cs" />
     <Compile Include="DoubleExtensionsTests.cs" />
     <Compile Include="ShieldTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
