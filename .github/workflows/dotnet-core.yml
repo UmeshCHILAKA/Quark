@@ -29,3 +29,6 @@ jobs:
       
     - name: Test
       run: dotnet test Source/Quark.Tests/Quark.Tests.csproj --no-restore --verbosity normal
+    
+    - name: nUint
+      run: Get-ChildItem "Source/Quark.Tests/" -recurse | where {$_.extension -eq ".csproj"} | % { dotnet test $_.FullName }
