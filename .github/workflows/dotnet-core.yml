@@ -26,3 +26,6 @@ jobs:
  
     - name: Build App
       run: msbuild Source/Quark.sln /p:Configuration=Release
+      
+    - name: Test
+      run: dotnet test --no-restore --verbosity normal
