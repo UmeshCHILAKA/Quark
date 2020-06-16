@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 
 namespace Quark
 {
@@ -40,6 +41,33 @@ namespace Quark
                 doubleValue = double.Parse(number, styles, CultureInfo.InvariantCulture);
             }
             return doubleValue;
+        }
+
+        /// <summary>
+        /// Removes the empty lines at end from input string.
+        /// </summary>
+        /// <param name="data">Data in which empty lines have to be removed at end.</param>
+        /// <returns>New string removing empty lines at end of string</returns>
+        public static string RemoveEmptyLinesAtEnd(this string data)
+        {
+            Shield.IsNull("data", data);
+            return data.TrimEnd(Environment.NewLine.ToCharArray());
+        }
+
+        /// <summary>
+        /// Removes the empty line at end from input string.
+        /// </summary>
+        /// <param name="data">Data in which new line has to be removed at end.</param>
+        /// <returns>New string removing empty line at end of string</returns>
+        public static string RemoveEmptyLineAtEnd(this string data)
+        {
+            Shield.IsNull("data", data);
+
+            if (data.EndsWith(Environment.NewLine))
+            {
+                data = data.Remove(data.Length - Environment.NewLine.Length);
+            }
+            return data;
         }
     }
 }

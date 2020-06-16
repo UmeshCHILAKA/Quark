@@ -13,6 +13,8 @@ Basic C# code for helpers and conversions between units
 ### StringExtensions
 - **LimitChars** - Limits the input string to the count.
 - **GetDouble** - Gets the number (double) from string.
+- **RemoveEmptyLineAtEnd** -  Removes the empty line at end from input string.
+- **RemoveEmptyLinesAtEnd** - Removes the empty lines at end from input string.
 
 ### DoubleExtensions
 - **LimitTo** - Limits number to boundaries.

@@ -38,5 +38,31 @@ namespace Quark.Tests
             Assert.AreEqual(5.45, "5.450000".GetDouble());
             Assert.AreEqual(-5.45, "-5.4500000000".GetDouble());
         }
+
+        [Test()]
+        public void RemoveEmptyLineAtEndTest()
+        {
+            var data = "Hello with end lines\r\n\r\n\r\n";
+            Assert.AreEqual("Hello with end lines\r\n\r\n", data.RemoveEmptyLineAtEnd());
+
+            data = "Hello without end line";
+            Assert.AreEqual(data, data.RemoveEmptyLineAtEnd());
+
+            data = null;
+            Assert.Throws<ArgumentNullException>(() => data.RemoveEmptyLineAtEnd());
+        }
+
+        [Test()]
+        public void RemoveEmptyLinesAtEndTest()
+        {
+            var data = "Hello with end lines\r\n\r\n\r\n";
+            Assert.AreEqual("Hello with end lines", data.RemoveEmptyLinesAtEnd());
+
+            data = "Hello without end line";
+            Assert.AreEqual(data, data.RemoveEmptyLinesAtEnd());
+
+            data = null;
+            Assert.Throws<ArgumentNullException>(() => data.RemoveEmptyLinesAtEnd());
+        }
     }
 }
