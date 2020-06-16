@@ -19,6 +19,8 @@ Basic C# code for helpers and conversions between units
 ### DoubleExtensions
 - **LimitTo** - Limits number to boundaries.
 - **HasValue** - Determines whether the number has value.
+- **ToString** - Converts to string with required Decimal places
+- **ToDisplayString** - Converts the numeric value of this instance to its equivalent string representation (takes care of NAN and Infinity).
 
 ### PathHelper
 - **AppFilePath** - Gets the application directory path, Path from where application is launched.
