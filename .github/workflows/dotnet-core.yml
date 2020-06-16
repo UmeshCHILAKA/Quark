@@ -28,4 +28,4 @@ jobs:
       run: msbuild Source/Quark.sln /p:Configuration=Release
       
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test Source/Quark.Tests/Quark.Tests.csproj --no-restore --verbosity normal
