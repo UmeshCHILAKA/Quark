@@ -12,10 +12,10 @@ Basic C# code for helpers and conversions between units
 
 ### StringExtensions
 - **LimitChars** - Limits the input string to the count.
-- **GetDouble** - Gets the double from string
+- **GetDouble** - Gets the number (double) from string.
 
 ### DoubleExtensions
-- **LimitTo** - Limits number to boundaries
+- **LimitTo** - Limits number to boundaries.
 - **HasValue** - Determines whether the number has value.
 
 ### PathHelper
