@@ -22,7 +22,7 @@ jobs:
       uses: NuGet/setup-nuget@v1.0.2
      
     - name: Restore NuGet Packages
-      run: nuget restore Quark.sln
+      run: nuget restore Source/Quark.sln
  
     - name: Build and Publish Web App
       run: msbuild Quark.sln /p:Configuration=Release
