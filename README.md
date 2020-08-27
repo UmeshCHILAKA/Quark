@@ -43,8 +43,8 @@ This is...
 string stringNumber=Device.GetReading();
 double value = stringNumber.GetDouble();
 ```
-- **RemoveEmptyLineAtEnd** -  Removes the empty line at end from input string. Equvalent to Trimming the 
 
+- **RemoveEmptyLineAtEnd** -  Removes the empty line at end from input string. Equvalent to Trimming the 
 - **RemoveEmptyLinesAtEnd** - Removes the empty lines at end from input string.
 
 ### DoubleExtensions
@@ -60,6 +60,30 @@ double value = stringNumber.GetDouble();
 - **RandomFileName** -Gets a random folder name or file name.
 
 ### CharExtensions
-- **ToUnicodeValue** - Returns the Unicode value of the character.
+- **ToUnicodeValue** - Returns the Unicode value of the character. This is helpful to convert unreadable characters to Unicode.
+```csharp
+Console.WriteLine('\t'.ToUnicodeValue());
+
+Output:
+U+0009
+```
+
 - **ToDisplayValue** -  Returns displayable value for a character.
+```csharp
+Console.WriteLine('\t'.ToDisplayValue());
+Console.WriteLine('a'.ToDisplayValue());
+
+Output:
+U+0009
+a
+```
+
 - **ToUrlValue** - Returns the URL equivalent character.
+```csharp
+Console.WriteLine('\t'.ToUrlValue());
+Console.WriteLine('a'.ToUrlValue());
+
+Output:
+%09
+a
+```
