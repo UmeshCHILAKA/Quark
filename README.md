@@ -4,16 +4,47 @@ Basic C# code for helpers and conversions between units
 ## Helpers
 
 ### Shield
+This calss is useful to validate the input paramenters and throw if invalid inputs are received.
+
 - **IsNull** - Checks if specified parameter is not null. Throws **ArgumentNullException**, if parameter is null.
 - **IsOutofRange** - Checks if specified value is in limits. Throws **ArgumentOutOfRangeException**, if value is outside limits.
 - **IsNan** - Checks if specified value is valid number. Throws **ArgumentException**, if value is NaN.
 - **IsInValidNumber** - Checks if specified value is valid number. Throws **ArgumentException**, if value is NaN or Infinity.
 - **IsCollectionEmpty** - Checks if Collection has values. Throws **ArgumentException**, if Collection is empty or  **ArgumentNullException** if collection is null.
 
+```csharp
+public void DoWork(Scheme selectedScheme, int age, double RateofInterest,List<Enquiries> questions)
+{
+	Shield.IsNull(SelectedScheme);
+	Shield.IsOutofRange(age, 18, 60);
+	Shield.IsInValidNumber(RateofInterest);
+	Shield.IsCollectionEmpty(questions);
+
+	// Your logic after inputs are validated
+}
+```
+
 ### StringExtensions
-- **LimitChars** - Limits the input string to the count.
-- **GetDouble** - Gets the number (double) from string.
-- **RemoveEmptyLineAtEnd** -  Removes the empty line at end from input string.
+
+Extensions for string class.
+- **LimitChars** - Limits the input string to the count. This is useful when limited number of characters are to be displayed.
+
+```csharp
+String longMessage = "This is a very long message.";
+Console.WriteLine(longMessage.LimitChars(10);
+
+Output:
+This is...
+```
+
+- **GetDouble** - Gets the number (double) from string. Easy way to convert string to double.
+
+```csharp
+string stringNumber=Device.GetReading();
+double value = stringNumber.GetDouble();
+```
+- **RemoveEmptyLineAtEnd** -  Removes the empty line at end from input string. Equvalent to Trimming the 
+
 - **RemoveEmptyLinesAtEnd** - Removes the empty lines at end from input string.
 
 ### DoubleExtensions
